@@ -9,8 +9,9 @@
 - [qb-smallresources](https://github.com/qbcore-framework/qb-smallresources) (Replaces qb-log) - qb-log was added to qb-smallresources
 - [qb-menu](https://github.com/qbcore-framework/qb-menu) - For the vehicle menus
 - [qb-input](https://github.com/qbcore-framework/qb-input) - For accessing evidence stashes
+- [ps-ui](https://github.com/Project-Sloth/ps-ui) - For Resist cuffs
 
 
 ## Features
--- Resist cuffs using ps-ui circle minigame
--- Updated blips
+- Resist cuffs using ps-ui circle minigame
+- Updated blips
