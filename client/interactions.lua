@@ -390,7 +390,7 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff)
             QBCore.Functions.Notify(Lang:t("info.cuffed_walk"), 'primary')
         end
         if not deadBozo and not lastStand then
-            local seconds = math.random(2,9) -- (7,10)
+            local seconds = math.random(2,9) --  (7,10)
             local circles = math.random(2,5)
             local success = exports['ps-ui']:Circle(function(success)
                 if success then
