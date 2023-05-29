@@ -401,7 +401,7 @@ RegisterNetEvent('police:client:GetCuffed', function(playerId, isSoftcuff)
                     isHandcuffed = true
                     ClearPedTasksImmediately(ped)
                 end
-            end, 1, 5) -- NumberOfCircles, MS
+            end, 1, 6) -- NumberOfCircles, MS
         end
         else
             isHandcuffed = false
