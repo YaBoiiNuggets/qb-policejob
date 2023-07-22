@@ -1,3 +1,5 @@
+print("^2qb-policejob ^7v^42^7.^43^7.^41 ^7- ^2Policejob Script by ^1Nuggets^7")
+
 Config = {}
 
 Config.Objects = {
