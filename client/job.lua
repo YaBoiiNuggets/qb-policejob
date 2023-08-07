@@ -118,7 +118,7 @@ function TakeOutImpound(vehicle)
                 QBCore.Functions.SetVehicleProperties(veh, properties)
                 SetVehicleNumberPlateText(veh, vehicle.plate)
                 SetEntityHeading(veh, coords.w)
-                exports['cc-fuel']:SetFuel(veh, vehicle.fuel)
+                exports['ps-fuel']:SetFuel(veh, vehicle.fuel)
                 doCarDamage(veh, vehicle)
                 TriggerServerEvent('police:server:TakeOutImpound', vehicle.plate, currentGarage)
                 closeMenuFull()
@@ -138,7 +138,7 @@ function TakeOutVehicle(vehicleInfo)
             SetCarItemsInfo()
             SetVehicleNumberPlateText(veh, Lang:t('info.police_plate')..tostring(math.random(1000, 9999)))
             SetEntityHeading(veh, coords.w)
-            exports['cc-fuel']:SetFuel(veh, 100.0)
+            exports['ps-fuel']:SetFuel(veh, 100.0)
             closeMenuFull()
             if Config.VehicleSettings[vehicleInfo] ~= nil then
                 if Config.VehicleSettings[vehicleInfo].extras ~= nil then
@@ -331,7 +331,7 @@ RegisterNetEvent('police:client:ImpoundVehicle', function(fullImpound, price)
     local vehicle = QBCore.Functions.GetClosestVehicle()
     local bodyDamage = math.ceil(GetVehicleBodyHealth(vehicle))
     local engineDamage = math.ceil(GetVehicleEngineHealth(vehicle))
-    local totalFuel = exports['cc-fuel']:GetFuel(vehicle)
+    local totalFuel = exports['ps-fuel']:GetFuel(vehicle)
     if vehicle ~= 0 and vehicle then
         local ped = PlayerPedId()
         local pos = GetEntityCoords(ped)
@@ -501,7 +501,7 @@ RegisterNetEvent('qb-police:client:spawnHelicopter', function(k)
             SetVehicleMod(veh, 0, 48)
             SetVehicleNumberPlateText(veh, "ZULU"..tostring(math.random(1000, 9999)))
             SetEntityHeading(veh, coords.w)
-            exports['cc-fuel']:SetFuel(veh, 100.0)
+            exports['ps-fuel']:SetFuel(veh, 100.0)
             closeMenuFull()
             TaskWarpPedIntoVehicle(PlayerPedId(), veh, -1)
             TriggerEvent("vehiclekeys:client:SetOwner", QBCore.Functions.GetPlate(veh))
@@ -703,12 +703,12 @@ if Config.UseTarget then
                             ["police"] = 0,
                             ["lspd"] = 0,
                             ["bcso"] = 0,
-                            ["sahp"] = 0,
+                            ["sast"] = 0,
                             ["ranger"] = 0,
                             ["fbi"] = 0,
                             ["lssd"] = 0,
                             ["ranger"] = 0,
-                            ["saspa"] = 0,
+                            ["sasp"] = 0,
                         },
                     },
                 },
@@ -735,12 +735,12 @@ if Config.UseTarget then
                             ["police"] = 0,
                             ["lspd"] = 0,
                             ["bcso"] = 0,
-                            ["sahp"] = 0,
+                            ["sast"] = 0,
                             ["ranger"] = 0,
                             ["fbi"] = 0,
                             ["lssd"] = 0,
                             ["ranger"] = 0,
-                            ["saspa"] = 0,
+                            ["sasp"] = 0,
                         },
                     },
                 },
@@ -767,12 +767,12 @@ if Config.UseTarget then
                             ["police"] = 0,
                             ["lspd"] = 0,
                             ["bcso"] = 0,
-                            ["sahp"] = 0,
+                            ["sast"] = 0,
                             ["ranger"] = 0,
                             ["fbi"] = 0,
                             ["lssd"] = 0,
                             ["ranger"] = 0,
-                            ["saspa"] = 0,
+                            ["sasp"] = 0,
                         },
                     },
                 },
@@ -799,12 +799,12 @@ if Config.UseTarget then
                             ["police"] = 0,
                             ["lspd"] = 0,
                             ["bcso"] = 0,
-                            ["sahp"] = 0,
+                            ["sast"] = 0,
                             ["ranger"] = 0,
                             ["fbi"] = 0,
                             ["lssd"] = 0,
                             ["ranger"] = 0,
-                            ["saspa"] = 0,
+                            ["sasp"] = 0,
                         },
                     },
                 },
@@ -831,12 +831,12 @@ if Config.UseTarget then
                             ["police"] = 0,
                             ["lspd"] = 0,
                             ["bcso"] = 0,
-                            ["sahp"] = 0,
+                            ["sast"] = 0,
                             ["ranger"] = 0,
                             ["fbi"] = 0,
                             ["lssd"] = 0,
                             ["ranger"] = 0,
-                            ["saspa"] = 0,
+                            ["sasp"] = 0,
                         },
                     },
                 },
